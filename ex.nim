@@ -1,6 +1,12 @@
 import asyncdispatch, httpclient, uri
 import jester
 
+from net import Port
+
+settings:
+  port = Port(5000)
+  bindAddr = "0.0.0.0"
+
 routes:
   get "/":
     redirect("/index.html")
