@@ -19,5 +19,3 @@ routes:
     client.close()
 
     resp content, "video/mp4"
-
-runForever()
