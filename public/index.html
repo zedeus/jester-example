@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <script src="/hls.js"></script>
+    <center><video height="600" id="video" controls></video></center>
+    <script>
+      var video = document.getElementById('video');
+      var hls = new Hls();
+      hls.loadSource('/video.m3u8');
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED,function() {
+        video.play();
+      });
+    </script>
+  </body>
+</html>
